@@ -15,7 +15,6 @@ def downloader(request):
         os.makedirs(download_dir, exist_ok=True)
         
         ydl_opts = {
-            "cookiefile": "cookies.txt",
             'format': 'bestvideo[height<=1080]+bestaudio/best',  # full HD max
             'merge_output_format': 'mp4',                        # merge into mp4
             'outtmpl': os.path.join(download_dir, '%(title)s.%(ext)s'),
